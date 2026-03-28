@@ -29,18 +29,24 @@ To maintain a dictionary of students with their marks in five subjects, calculat
 
 ## 💻 PROGRAM:
 ```
-def wrap(string, max_width):
-    wrapped_lines = []  # list to store each line
-    for i in range(0, len(string), max_width):
-        part = string[i:i+max_width]
-        wrapped_lines.append(part)
-    return '\n'.join(wrapped_lines)  
-string, max_width = input(), int(input())
-print(wrap(string, max_width))
+marks = eval(input())
+total = 0
+total_marks = marks.copy()
+for key,val in marks.items():
+    total = sum(val)
+    total_marks[key] = total
+print(total_marks)
+max = 0
+topper = ''
+for key,val in total_marks.items():
+    if val>max:
+        max = val
+        topper = key
+print("Topper is: ", topper, "with marks = ",max)
 ```
 
 ## OUTPUT
-<img width="551" height="200" alt="Screenshot 2026-03-28 075531" src="https://github.com/user-attachments/assets/12721026-3072-4910-ab96-7fb65012278d" />
+<img width="557" height="66" alt="Screenshot 2026-03-28 075745" src="https://github.com/user-attachments/assets/019869fd-5153-4335-b3c9-64841c68ab8e" />
 
 ## RESULT
-Thus, the Python program defines a function that wraps a long string into multiple lines is executed successfully.
+Thus, the Python program that determine the top-performing student based on the total marks across five subjects has been executed successfully.
