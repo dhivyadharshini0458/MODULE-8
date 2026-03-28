@@ -26,9 +26,20 @@ To write a Python function that takes a long string and a specified width, and r
 
 
 ## 🧪 Program
-Add Code Here
+```
+def wrap(string, max_width):
+    wrapped_lines = []  # list to store each line
+    for i in range(0, len(string), max_width):
+        part = string[i:i+max_width]
+        wrapped_lines.append(part)
+    return '\n'.join(wrapped_lines)  
+string, max_width = input(), int(input())
+print(wrap(string, max_width))
+```
 
 ## Sample Output
+<img width="574" height="194" alt="Screenshot 2026-03-28 080913" src="https://github.com/user-attachments/assets/7d32c5e4-b7ce-4905-a4a6-2e16f0fbd4e3" />
+
 
 ## Result
-
+Thus, the Python program defines a function that wraps a long string into multiple lines is executed successfully.
