@@ -28,8 +28,19 @@ To maintain a dictionary of students with their marks in five subjects, calculat
 ---
 
 ## 💻 PROGRAM:
-ADD CODE HERE
+```
+def wrap(string, max_width):
+    wrapped_lines = []  # list to store each line
+    for i in range(0, len(string), max_width):
+        part = string[i:i+max_width]
+        wrapped_lines.append(part)
+    return '\n'.join(wrapped_lines)  
+string, max_width = input(), int(input())
+print(wrap(string, max_width))
+```
 
 ## OUTPUT
+<img width="551" height="200" alt="Screenshot 2026-03-28 075531" src="https://github.com/user-attachments/assets/12721026-3072-4910-ab96-7fb65012278d" />
 
 ## RESULT
+Thus, the Python program defines a function that wraps a long string into multiple lines is executed successfully.
